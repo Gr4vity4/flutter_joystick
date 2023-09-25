@@ -51,31 +51,6 @@ class _JoystickBasePainter extends CustomPainter {
     canvas.drawCircle(center, radius - 12, _centerPaint);
     canvas.drawCircle(center, radius - 60, _centerPaint);
 
-    if (mode != JoystickMode.horizontal) {
-      // draw vertical arrows
-      canvas.drawLine(Offset(center.dx - 30, center.dy - 50),
-          Offset(center.dx, center.dy - 70), _linePaint);
-      canvas.drawLine(Offset(center.dx + 30, center.dy - 50),
-          Offset(center.dx, center.dy - 70), _linePaint);
-      canvas.drawLine(Offset(center.dx - 30, center.dy + 50),
-          Offset(center.dx, center.dy + 70), _linePaint);
-      canvas.drawLine(Offset(center.dx + 30, center.dy + 50),
-          Offset(center.dx, center.dy + 70), _linePaint);
-    }
-
-    if (mode != JoystickMode.vertical) {
-      // draw horizontal arrows
-      canvas.drawLine(Offset(center.dx - 50, center.dy - 30),
-          Offset(center.dx - 70, center.dy), _linePaint);
-      canvas.drawLine(Offset(center.dx - 50, center.dy + 30),
-          Offset(center.dx - 70, center.dy), _linePaint);
-      canvas.drawLine(Offset(center.dx + 50, center.dy - 30),
-          Offset(center.dx + 70, center.dy), _linePaint);
-      canvas.drawLine(Offset(center.dx + 50, center.dy + 30),
-          Offset(center.dx + 70, center.dy), _linePaint);
-    }
-  }
-
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
