@@ -135,46 +135,6 @@ class _JoystickSquareBasePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
 
-    if (mode != JoystickMode.horizontal) {
-      // draw vertical arrows
-      canvas.drawLine(
-          Offset(center.dx - _lineWidth, center.dy - _linePosition),
-          Offset(center.dx, center.dy - _linePosition - _lineHeight),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx + _lineWidth, center.dy - _linePosition),
-          Offset(center.dx, center.dy - _linePosition - _lineHeight),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx - _lineWidth, center.dy + _linePosition),
-          Offset(center.dx, center.dy + _linePosition + _lineHeight),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx + _lineWidth, center.dy + _linePosition),
-          Offset(center.dx, center.dy + _linePosition + _lineHeight),
-          _linePaint);
-    }
-
-    if (mode != JoystickMode.vertical) {
-      // draw horizontal arrows
-      canvas.drawLine(
-          Offset(center.dx - _linePosition, center.dy - _lineWidth),
-          Offset(center.dx - _linePosition - _lineHeight, center.dy),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx - _linePosition, center.dy + _lineWidth),
-          Offset(center.dx - _linePosition - _lineHeight, center.dy),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx + _linePosition, center.dy - _lineWidth),
-          Offset(center.dx + _linePosition + _lineHeight, center.dy),
-          _linePaint);
-      canvas.drawLine(
-          Offset(center.dx + _linePosition, center.dy + _lineWidth),
-          Offset(center.dx + _linePosition + _lineHeight, center.dy),
-          _linePaint);
-    }
-
     if (mode == JoystickMode.all) {
       canvas.drawLine(
           Offset(center.dx + _lineWidth, center.dy - _linePosition),
