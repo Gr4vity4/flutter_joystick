@@ -47,7 +47,7 @@ class _JoystickBasePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.width / 2);
     final radius = size.width / 2;
-    canvas.drawCircle(center, radius, _borderPaint);
+    // canvas.drawCircle(center, radius, _borderPaint);
     canvas.drawCircle(center, radius - 12, _centerPaint);
     canvas.drawCircle(center, radius - 60, _centerPaint);
   }
