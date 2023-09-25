@@ -50,6 +50,7 @@ class _JoystickBasePainter extends CustomPainter {
     canvas.drawCircle(center, radius, _borderPaint);
     canvas.drawCircle(center, radius - 12, _centerPaint);
     canvas.drawCircle(center, radius - 60, _centerPaint);
+  }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
